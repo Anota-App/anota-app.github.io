@@ -1,0 +1,71 @@
+<!doctype html>
+<!-- viewer/index.html — the family's page for a ▦ QR for parent (2026-10-16 sharecap Round 2).
+     Static, hosted apart from the app (viewer/README.md). It loads two scripts of its own and nothing
+     else: no font, no analytics, no third party. The link's #fragment holds the handout's id and its
+     key; a browser never sends a fragment, and this page sends only the id (and a code, when asked)
+     to the clinic's database — what comes back is ciphertext this page decrypts on the phone. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
+  <!-- The handout's own styles are inline (a growth card is HTML + SVG), and its iframe (srcdoc) takes
+       this page's policy — hence style-src 'unsafe-inline'. No script runs in it: the frame is
+       sandboxed without allow-scripts, and script-src admits this folder's two files only. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://*.supabase.co http://127.0.0.1:* http://localhost:*; frame-src 'self' blob: data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <link rel="icon" href="data:,">
+  <title>Anota</title>
+  <link rel="stylesheet" href="viewer.css">
+  <script src="config.js" defer></script>
+  <script src="viewer.js" defer></script>
+</head>
+<body>
+  <main id="hv" class="hv" aria-live="polite">
+    <header class="hv-top">
+      <span class="hv-brand">ANOTA</span>
+      <span class="hv-what" id="hv-what"></span>
+    </header>
+
+    <!-- one state at a time: opening · code · locked · gone · broken · offline · shown -->
+    <section class="hv-card hv-msg" id="hv-msg" hidden>
+      <div class="hv-ico" id="hv-msg-ico" aria-hidden="true"></div>
+      <h1 class="hv-h" id="hv-msg-h"></h1>
+      <p class="hv-p" id="hv-msg-p"></p>
+      <button class="hv-btn is-primary" id="hv-retry" type="button" hidden></button>
+    </section>
+
+    <section class="hv-card hv-code" id="hv-code" hidden>
+      <div class="hv-ico" aria-hidden="true">🔒</div>
+      <h1 class="hv-h" id="hv-code-h"></h1>
+      <p class="hv-p" id="hv-code-p"></p>
+      <div class="hv-code-row">
+        <input id="hv-code-in" class="hv-code-in" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="one-time-code" spellcheck="false">
+        <button class="hv-btn is-primary" id="hv-code-go" type="button"></button>
+      </div>
+      <p class="hv-p hv-warn" id="hv-code-err" hidden></p>
+    </section>
+
+    <section class="hv-shown" id="hv-shown" hidden>
+      <div class="hv-bar">
+        <div class="hv-bar-t">
+          <div class="hv-title" id="hv-title"></div>
+          <div class="hv-until" id="hv-until"></div>
+        </div>
+        <div class="hv-acts">
+          <button class="hv-btn is-primary" id="hv-save" type="button" hidden></button>
+          <button class="hv-btn" id="hv-share" type="button" hidden></button>
+          <button class="hv-btn" id="hv-print" type="button" hidden></button>
+        </div>
+      </div>
+      <div class="hv-doc-wrap">
+        <iframe id="hv-doc" class="hv-doc" title="" sandbox="allow-same-origin allow-modals" referrerpolicy="no-referrer"></iframe>
+      </div>
+      <p class="hv-foot" id="hv-foot"></p>
+    </section>
+  </main>
+  <noscript><p class="hv-p" style="padding:24px">This page needs JavaScript to open the document. · Cette page a besoin de JavaScript pour ouvrir le document.</p></noscript>
+</body>
+</html>
