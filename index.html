@@ -1,5 +1,6 @@
 <!doctype html>
-<!-- viewer/index.html — the family's page for a ▦ QR for parent (2026-10-16 sharecap Round 2).
+<!-- viewer/index.html — the family's page for a ▦ QR for parent (2026-10-16 sharecap Round 2), and since
+     2026-10-22 (resqr) the Patient and Family Resource Page (a link ending #R1.<codes> — resources-page.js).
      Static, hosted apart from the app (viewer/README.md). It loads two scripts of its own and nothing
      else: no font, no analytics, no third party. The link's #fragment holds the handout's id and its
      key; a browser never sends a fragment, and this page sends only the id (and a code, when asked)
@@ -20,6 +21,10 @@
   <title>Anota</title>
   <link rel="stylesheet" href="viewer.css">
   <script src="config.js" defer></script>
+  <!-- 2026-10-22 (resqr) — the Patient and Family Resource Page (#R1.<codes>): the catalogue (a copy of
+       utility/shared/resource-catalogue.js) and its page; neither fetches anything but this site's files. -->
+  <script src="resource-catalogue.js" defer></script>
+  <script src="resources-page.js" defer></script>
   <script src="viewer.js" defer></script>
 </head>
 <body>
@@ -66,6 +71,8 @@
       <p class="hv-foot" id="hv-foot"></p>
     </section>
   </main>
+  <!-- 2026-10-22 (resqr) — the resource route draws here; the handout states above stay hidden -->
+  <main id="rp" class="rp" hidden></main>
   <noscript><p class="hv-p" style="padding:24px">This page needs JavaScript to open the document. · Cette page a besoin de JavaScript pour ouvrir le document.</p></noscript>
 </body>
 </html>

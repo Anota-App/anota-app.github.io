@@ -203,8 +203,20 @@
     setTimeout(() => { try { inp.focus(); } catch (_) {} }, 50);
   }
 
-  $('hv-what').textContent = t('what');
-  addEventListener('hashchange', () => run());
-  run();
+  // 2026-10-22 (resqr) — a link ending #R1.<codes> is the Patient and Family Resource Page: no server, no key —
+  // resources-page.js draws it from the catalogue this site carries. Every other link is a sealed handout.
+  function route() {
+    const rp = window.AnotaResourcePage, box = document.getElementById('rp');
+    if (rp && box && rp.matches(location.hash)) {
+      $('hv').hidden = true; box.hidden = false; document.body.classList.add('is-rp');
+      rp.render(location.hash, box);
+      return;
+    }
+    if (box) { box.hidden = true; $('hv').hidden = false; document.body.classList.remove('is-rp'); }
+    $('hv-what').textContent = t('what');
+    run();
+  }
+  addEventListener('hashchange', route);
+  route();
   window.__anotaViewer = { parseLink, unseal, clean };   // the suites read these; nothing else does
 })();
