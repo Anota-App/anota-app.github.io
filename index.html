@@ -29,8 +29,8 @@
 </head>
 <body>
   <main id="hv" class="hv" aria-live="polite">
+    <!-- 2026-10-22 (qrshare) — the resource page's look: one kicker, then the state below it -->
     <header class="hv-top">
-      <span class="hv-brand">ANOTA</span>
       <span class="hv-what" id="hv-what"></span>
     </header>
 
@@ -54,17 +54,16 @@
     </section>
 
     <section class="hv-shown" id="hv-shown" hidden>
-      <div class="hv-bar">
-        <div class="hv-bar-t">
-          <div class="hv-title" id="hv-title"></div>
-          <div class="hv-until" id="hv-until"></div>
-        </div>
+      <!-- 2026-10-22 (qrshare) — the hero: the document's name large, until when it opens, then the actions as pills -->
+      <header class="hv-hero">
+        <h1 class="hv-title" id="hv-title"></h1>
+        <p class="hv-lede"><span class="hv-until" id="hv-until"></span> <span class="hv-keep" id="hv-keep"></span></p>
         <div class="hv-acts">
           <button class="hv-btn is-primary" id="hv-save" type="button" hidden></button>
           <button class="hv-btn" id="hv-share" type="button" hidden></button>
           <button class="hv-btn" id="hv-print" type="button" hidden></button>
         </div>
-      </div>
+      </header>
       <div class="hv-doc-wrap">
         <iframe id="hv-doc" class="hv-doc" title="" sandbox="allow-same-origin allow-modals" referrerpolicy="no-referrer"></iframe>
       </div>

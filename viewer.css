@@ -1,84 +1,96 @@
 /* viewer/viewer.css — the family's page (2026-10-16 sharecap Round 2). A phone first: one column, the
  * system's own fonts, the page follows the phone's light / dark; the document itself stays white paper. */
-:root {
-  color-scheme: light dark;
-  --bg: light-dark(#f4f6f8, #121417);
-  --card: light-dark(#ffffff, #1c1f23);
-  --ink: light-dark(#1b1f24, #e3e6ea);
-  --ink2: light-dark(#5f6b73, #a3adb3);
-  --line: light-dark(rgba(0, 0, 0, 0.08), rgba(255, 255, 255, 0.1));
-  --ac: light-dark(#2e7d32, #81c784);
-  --warn: light-dark(#a15c00, #e8a33a);
-}
+:root { color-scheme: light dark; --warn: light-dark(#a15c00, #e8a33a); }
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+html, body { margin: 0; padding: 0; }
 body {
-  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 [hidden] { display: none !important; }
 
-.hv { max-width: 860px; margin: 0 auto; padding: 14px 14px 28px; display: flex; flex-direction: column; gap: 12px; }
-.hv-top { display: flex; align-items: baseline; gap: 10px; padding: 2px 4px; }
-.hv-brand { font-size: 12px; font-weight: 800; letter-spacing: 4px; color: var(--ac); }
-.hv-what { font-size: 10.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink2); }
+/* ─── 2026-10-22 (qrshare) — the growth card's page wears the resource page's look ───────────────────────────
+ * One family of pages: the same paper, the same wash, a kicker over a large title, a lede, pill actions with a
+ * drawn mark (the primary one dark), cards on a soft shadow, the privacy line at the foot. The tokens are the
+ * resource page's (below), now on <body> for both routes. The ids are unchanged — the suites read them. */
+.hv { max-width: 860px; margin: 0 auto; padding: 18px 16px 40px; display: flex; flex-direction: column; }
+.hv-top { display: flex; align-items: center; min-height: 36px; padding: 6px 2px 0; }
+.hv-what { font-size: 12px; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--rp-ink2); }
+/* 2026-10-27 (grfr) — a card in two languages: the resource page's EN · FR switch on the kicker's right. Same look
+ * (.rp-lang), and each half a 44-px target (the hit area runs 6 px above and below the 32-px pill). */
+.hv-top.has-lang { justify-content: space-between; gap: 12px; }
+.hv-lang .rp-lang-b { position: relative; }
+.hv-lang .rp-lang-b::after { content: ""; position: absolute; inset: -6px -1px; }
 
 .hv-card {
-  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
-  padding: 26px 20px 22px; text-align: center;
-  box-shadow: 0 18px 44px light-dark(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.5));
+  margin-top: 18px; padding: 30px 22px 26px; border-radius: 22px; text-align: center;
+  background: var(--rp-card);
+  box-shadow: 0 0 0 1px var(--rp-line), 0 1px 2px rgba(16, 24, 40, 0.04), 0 12px 32px light-dark(rgba(16, 24, 40, 0.08), rgba(0, 0, 0, 0.45));
   display: flex; flex-direction: column; align-items: center; gap: 8px;
 }
-.hv-ico { font-size: 34px; line-height: 1; }
-.hv-h { margin: 4px 0 0; font-size: 20px; font-weight: 700; letter-spacing: -0.01em; text-wrap: balance; }
-.hv-p { margin: 0; max-width: 34ch; color: var(--ink2); text-wrap: pretty; }
+.hv-ico {
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
+  font-size: 30px; line-height: 1; background: var(--rp-wash);
+}
+.hv-h { margin: 6px 0 0; font-size: 22px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
+.hv-p { margin: 0; max-width: 34ch; color: var(--rp-ink2); text-wrap: pretty; }
 .hv-warn { color: var(--warn); font-weight: 600; }
 
 .hv-btn {
-  -webkit-appearance: none; appearance: none; font: inherit; font-size: 14px; font-weight: 700;
-  padding: 11px 18px; min-height: 44px; border-radius: 999px; cursor: pointer;
-  border: 1px solid var(--line); background: light-dark(#fff, #262a2f); color: var(--ink);
+  -webkit-appearance: none; appearance: none; font: inherit; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 20px; border: 0; border-radius: 999px;
+  font-size: 15.5px; font-weight: 650; letter-spacing: -0.005em;
+  background: var(--rp-card); color: var(--rp-ink);
+  box-shadow: 0 0 0 1px var(--rp-line), 0 1px 2px rgba(16, 24, 40, 0.05);
+  -webkit-tap-highlight-color: transparent;
 }
-.hv-btn.is-primary { background: var(--ac); border-color: transparent; color: light-dark(#fff, #0d1a0e); }
+.hv-btn.is-primary {
+  background: var(--rp-ink); color: light-dark(#fff, #0f1114);
+  box-shadow: 0 8px 22px light-dark(rgba(16, 24, 40, 0.18), rgba(0, 0, 0, 0.5));
+}
+.hv-btn:active { transform: scale(0.98); }
 .hv-btn:disabled { opacity: 0.55; cursor: default; }
-.hv-btn:focus-visible, .hv-code-in:focus-visible { outline: 3px solid color-mix(in srgb, var(--ac) 55%, transparent); outline-offset: 2px; }
+.hv-btn svg { flex: none; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.hv-btn:focus-visible, .hv-code-in:focus-visible { outline: 3px solid color-mix(in srgb, var(--rp-ac) 60%, transparent); outline-offset: 2px; }
 
-.hv-code-row { display: flex; gap: 8px; align-items: center; margin-top: 6px; }
+.hv-code-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
 .hv-code-in {
   width: 6.2em; text-align: center; font: 700 26px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: 0.35em;
-  padding: 9px 4px 9px 14px; border-radius: 14px; border: 1px solid var(--line); background: light-dark(#fff, #262a2f); color: var(--ink);
+  padding: 10px 4px 10px 14px; border-radius: 16px; border: 0; background: var(--rp-card); color: var(--rp-ink);
+  box-shadow: 0 0 0 1px var(--rp-line), inset 0 1px 2px light-dark(rgba(16, 24, 40, 0.06), rgba(0, 0, 0, 0.3));
 }
 
-.hv-shown { display: flex; flex-direction: column; gap: 10px; }
-.hv-bar {
-  position: sticky; top: 0; z-index: 2;
-  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
-  padding: 10px 12px; border-radius: 16px;
-  background: color-mix(in srgb, var(--card) 92%, transparent); border: 1px solid var(--line);
-  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+.hv-shown { display: flex; flex-direction: column; }
+.hv-hero { padding: 0 2px 20px; }
+.hv-title {
+  margin: 22px 0 0; font-size: clamp(30px, 8.4vw, 44px); line-height: 1.06; font-weight: 750; letter-spacing: -0.028em;
+  text-wrap: balance; overflow-wrap: break-word;
 }
-.hv-bar-t { flex: 1 1 200px; min-width: 0; }
-.hv-title { font-size: 15px; font-weight: 700; overflow-wrap: break-word; }
-.hv-until { font-size: 12px; color: var(--ink2); }
-.hv-acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.hv-tt-sub { color: var(--rp-ink2); font-weight: 650; white-space: nowrap; }
+.hv-lede { margin: 12px 0 0; max-width: 44ch; font-size: 16.5px; line-height: 1.45; color: var(--rp-ink2); text-wrap: pretty; }
+.hv-acts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
-.hv-doc-wrap { border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+.hv-doc-wrap {
+  border-radius: 22px; overflow: hidden; background: #fff;
+  box-shadow: 0 0 0 1px var(--rp-line), 0 1px 2px rgba(16, 24, 40, 0.04), 0 12px 32px light-dark(rgba(16, 24, 40, 0.08), rgba(0, 0, 0, 0.45));
+}
 .hv-doc { display: block; width: 100%; height: 70vh; border: 0; background: #fff; color-scheme: light; }
-.hv-foot { margin: 2px 6px 0; font-size: 12px; color: var(--ink2); text-align: center; }
-.hv-foot.is-warn { color: var(--warn); font-weight: 600; }
+.hv-foot { margin: 26px auto 0; max-width: 46ch; font-size: 12.5px; line-height: 1.45; color: var(--rp-ink2); opacity: 0.85; text-align: center; text-wrap: pretty; }
+.hv-foot.is-warn { color: var(--warn); font-weight: 600; opacity: 1; }
 
 @media print {
-  body { background: #fff; padding: 0; }
-  .hv-top, .hv-bar, .hv-foot, .hv-msg, .hv-code { display: none !important; }
-  .hv, .hv-doc-wrap { padding: 0; border: 0; border-radius: 0; max-width: none; }
+  body { background: #fff !important; padding: 0; }
+  .hv-top, .hv-hero, .hv-foot, .hv-msg, .hv-code { display: none !important; }
+  .hv, .hv-doc-wrap { padding: 0; box-shadow: none; border-radius: 0; max-width: none; }
 }
 
 /* ─── 2026-10-22 (resqr) — the Patient and Family Resource Page (resources-page.js) ───────────────────────────
  * A phone first: one column of cards, each a preview of the document (the top of page 1) over its title and
  * source; one tap opens it. Two columns from 600 px, three from 960. The phone's light / dark; the previews stay
  * paper. No web font — the system's own. */
-body.is-rp {
+body {   /* both routes since 2026-10-22 (qrshare) — the growth card's page shares these */
   --rp-bg: light-dark(#f5f3ef, #0f1114);
   --rp-wash: light-dark(#e7eefc, #17202e);
   --rp-card: light-dark(#ffffff, #1a1d22);
@@ -90,7 +102,6 @@ body.is-rp {
   background-image: radial-gradient(120% 60% at 50% -10%, var(--rp-wash), transparent 62%);
   background-repeat: no-repeat;
   color: var(--rp-ink);
-  font-size: 16px;
 }
 .rp { max-width: 1080px; margin: 0 auto; padding: 18px 16px 40px; }
 .rp-hero { padding: 6px 2px 18px; }
