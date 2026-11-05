@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anota — Politique de confidentialité · Privacy Policy</title>
+<!--
+  Privacy/anota-privacy-policy.html — 2026-09-11 (dist), rewritten 2026-10-30 (policy), case cards for learning 2026-10-31 (learn)
+  Self-contained (no external assets), bilingual FR/EN (the toggle hides one
+  language; print shows both), frosted-glass look in the app's own language,
+  printable. Every statement here is checked against what the code does — do
+  NOT add a claim the code does not keep. Generated with the .md by _archive/1030policy/build_policy.py. Contact and region filled 2026-10-30 (storeup);
+  the same text lives in anota-privacy-policy.md.
+-->
+<style>
+  :root {
+    --ink: #1b2430; --ink-2: #4a5568; --ink-3: #718096;
+    --accent: #f26b1d; --accent-soft: rgba(242, 107, 29, .12);
+    --plate: rgba(255, 255, 255, .62); --plate-rim: rgba(255, 255, 255, .85);
+    --line: rgba(27, 36, 48, .10);
+    --sky-a: #dfeefc; --sky-b: #f6efe6; --sky-c: #e6f4ea;
+    --shadow: 0 10px 30px rgba(27, 36, 48, .08), 0 1px 0 rgba(255,255,255,.8) inset;
+    --radius: 22px; --pill: 999px;
+    --font: -apple-system, "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, "Liberation Sans", Arial, sans-serif;
+  }
+  html[data-theme="dark"] {
+    --ink: #eef2f7; --ink-2: #b9c3d0; --ink-3: #8593a4;
+    --plate: rgba(20, 26, 34, .58); --plate-rim: rgba(255, 255, 255, .10);
+    --line: rgba(255, 255, 255, .10);
+    --sky-a: #0f1720; --sky-b: #1a1a22; --sky-c: #0f1a16;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .45), 0 1px 0 rgba(255,255,255,.06) inset;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+      --ink: #eef2f7; --ink-2: #b9c3d0; --ink-3: #8593a4;
+      --plate: rgba(20, 26, 34, .58); --plate-rim: rgba(255, 255, 255, .10);
+      --line: rgba(255, 255, 255, .10);
+      --sky-a: #0f1720; --sky-b: #1a1a22; --sky-c: #0f1a16;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .45), 0 1px 0 rgba(255,255,255,.06) inset;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: var(--font); color: var(--ink); line-height: 1.55; font-size: 15px;
+    background: radial-gradient(1200px 700px at 8% -10%, var(--sky-a), transparent 60%),
+                radial-gradient(900px 600px at 100% 10%, var(--sky-c), transparent 55%),
+                linear-gradient(180deg, var(--sky-b), var(--sky-a));
+    min-height: 100vh; padding: 32px 16px 64px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .plate {
+    background: var(--plate); -webkit-backdrop-filter: blur(18px) saturate(1.2); backdrop-filter: blur(18px) saturate(1.2);
+    border: 1px solid var(--plate-rim); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 28px 30px; margin: 0 0 18px;
+  }
+  header.plate { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+  .logo { width: 44px; height: 44px; border-radius: 14px; background: linear-gradient(145deg, #ff8a3d, var(--accent)); box-shadow: 0 6px 16px rgba(242,107,29,.35); display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 20px; letter-spacing: .5px; }
+  h1 { font-size: 22px; margin: 0; line-height: 1.25; }
+  h1 small { display: block; font-weight: 500; color: var(--ink-3); font-size: 13px; margin-top: 2px; }
+  .lang { margin-left: auto; display: inline-flex; gap: 4px; padding: 4px; border-radius: var(--pill); background: var(--accent-soft); }
+  .lang button { border: 0; background: transparent; color: var(--ink-2); font: inherit; font-weight: 600; padding: 6px 14px; border-radius: var(--pill); cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; box-shadow: 0 3px 10px rgba(242,107,29,.35); }
+  h2 { font-size: 17px; margin: 0 0 10px; display: flex; align-items: center; gap: 10px; }
+  h2::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); flex: none; }
+  p, li { color: var(--ink-2); }
+  p strong, li strong { color: var(--ink); }
+  ul { padding-left: 20px; margin: 8px 0 0; }
+  li { margin: 4px 0; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: var(--pill); background: var(--accent-soft); color: var(--ink); font-weight: 600; font-size: 13px; white-space: nowrap; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 10px; }
+  .cell { border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; background: rgba(255,255,255,.25); }
+  html[data-theme="dark"] .cell { background: rgba(255,255,255,.04); }
+  .cell b { display: block; margin-bottom: 4px; }
+  .cell.no b::before { content: "✕ "; color: #c0392b; }
+  .cell.yes b::before { content: "✓ "; color: #1e8e3e; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; background: rgba(0,0,0,.06); padding: 1px 6px; border-radius: 6px; }
+  html[data-theme="dark"] code { background: rgba(255,255,255,.08); }
+  footer { color: var(--ink-3); font-size: 13px; text-align: center; padding-top: 6px; }
+  /* language switch */
+  html[data-lang="fr"] [lang="en"] { display: none; }
+  html[data-lang="en"] [lang="fr"] { display: none; }
+  @media print {
+    body { background: #fff; padding: 0; font-size: 12.5px; }
+    .plate { background: #fff; border: 1px solid #ddd; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; break-inside: avoid; padding: 16px 18px; margin-bottom: 10px; }
+    .lang { display: none; }
+    html[data-lang] [lang="en"], html[data-lang] [lang="fr"] { display: block; }
+    section[lang="en"] { break-before: page; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="plate">
+    <div class="logo">A</div>
+    <h1>
+      <span lang="fr">Anota — Politique de confidentialité<small>En vigueur le 11 septembre 2026 · Mise à jour le 31 octobre 2026 · Extension Chrome et Edge, applications Mac et iPhone</small></span>
+      <span lang="en">Anota — Privacy Policy<small>Effective September 11, 2026 · Updated October 31, 2026 · Chrome and Edge extension, Mac and iPhone apps</small></span>
+    </h1>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" data-set-lang="fr" aria-pressed="true">Français</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════ FRANÇAIS ═══════════════════════════ -->
+  <section lang="fr">
+    <div class="plate">
+      <h2>En une phrase</h2>
+      <p><strong>Le serveur d'Anota ne conserve jamais le nom, la date de naissance ou le numéro d'assurance maladie d'un patient sous une forme qu'il puisse lire.</strong> Anota lit le dossier Omnimed que vous avez ouvert, remplit votre gabarit et écrit la note dans ce même dossier. Sur son serveur, Anota conserve ce qui vous concerne — votre compte, votre configuration, vos statistiques — et vos cartes de cas : chaque note que vous insérez est aussi gardée, dépersonnalisée, comme une carte pour apprendre de vos cas, que vous seul voyez à moins de la partager. Quelques fonctions que vous déclenchez vous-même font transiter des renseignements de patients par le serveur, chiffrés de façon que le serveur ne puisse pas les lire.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Qui est responsable</h2>
+      <p>Anota est développée et exploitée par son auteur, un médecin exerçant au Québec. Pour toute question, demande d'accès, de rectification ou de suppression, écrivez à <span class="pill">aaldeagg@gmail.com</span>. Cette personne agit comme responsable de la protection des renseignements personnels au sens de la Loi 25.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Ce qu'Anota enregistre sur son serveur — et pourquoi</h2>
+      <p>Anota utilise un serveur (Supabase, projet hébergé dans la région <span class="pill">Canada (Central) — Montréal</span>) pour que votre configuration et vos cartes vous suivent d'un appareil à l'autre. Il y est conservé, sous votre compte :</p>
+      <div class="grid">
+        <div class="cell yes"><b>Votre compte</b>Votre adresse courriel et la date de création du compte. Vous vous connectez par un code à usage unique envoyé par courriel, ou par votre compte Google ou Apple si vous le choisissez (Anota en reçoit alors votre adresse courriel et votre nom). Les comptes sont créés sur invitation.</div>
+        <div class="cell yes"><b>Votre profil</b>Le nom et la ligne de spécialité que vous saisissez, votre langue, la version de l'application, le type d'appareil et la date de votre dernière utilisation — pour savoir qui utilise quelle version.</div>
+        <div class="cell yes"><b>Votre licence pilote</b>À la première utilisation, l'entente de licence et de confidentialité que vous signez : votre nom, votre profession, votre courriel, la date, la langue choisie, la signature que vous dessinez, l'empreinte du texte accepté et la version de l'application. C'est la preuve de votre accord ; elle ne peut pas être modifiée.</div>
+        <div class="cell yes"><b>Votre configuration</b>Vos gabarits de note, cartes de diagnostic, listes, doses usuelles, raccourcis, thème et préférences — tout ce que vous modifiez dans les réglages. S'y ajoute ce qu'Anota apprend de vos notes et de vos cartes de cas pour ajuster ses suggestions : des mots de vos listes, des noms de cartes et de diagnostics, de courtes valeurs — sans code de patient.</div>
+        <div class="cell yes"><b>Vos statistiques</b>Les nombres de patients, de visites, de diagnostics, d'ordonnances et d'interventions, et le temps passé sur chaque note et chaque section. Rien qui identifie un patient — ni nom, ni numéro, ni code qui en tiendrait lieu.</div>
+        <div class="cell yes"><b>Vos cartes de cas</b>À chaque note insérée qui comporte un diagnostic, Anota garde une carte de cas : le contenu clinique de la note (histoire, examen, signes vitaux, antécédents, médicaments et allergies tels que vous les avez écrits, diagnostics, impressions, plan), l'âge du patient à la visite, son sexe et la date de la visite, ainsi que les fichiers et les commentaires que vous y ajoutez. Jamais le nom, la date de naissance, le numéro d'assurance maladie ou de dossier. Pour regrouper les cartes d'un même patient, un code à sens unique est calculé sur votre ordinateur à partir du nom, de la date de naissance et du sexe, avec une clé secrète qui ne quitte pas cet ordinateur ; le serveur ne peut pas en retrouver le patient. Le texte libre est gardé tel que vous l'avez tapé : n'y écrivez pas d'identifiant, et n'en laissez pas sur une image que vous joignez.</div>
+        <div class="cell yes"><b>Événements d'utilisation et d'erreur</b>Version de l'application, type d'appareil, nom de la fonction utilisée ou de l'étape qui a échoué (par exemple une note ou un formulaire qui n'est pas entré dans Omnimed), texte d'erreur assaini : ce qui ressemble à une note, un nom, un numéro d'assurance maladie, un courriel, un téléphone ou une longue suite de chiffres est retiré, et une ligne ne dépasse pas 2 Ko. Jamais le contenu d'une note ou de la page du DME, jamais les touches frappées. Le bouton « Signaler un problème » envoie en plus le texte que vous écrivez.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>Ce qui ne transite que lorsque vous le demandez</h2>
+      <div class="grid">
+        <div class="cell yes"><b>Partager une carte de cas</b>En image, en texte ou en PDF que vous envoyez vous-même, par un lien pour un collègue ou par une publication dans un groupe. Vous choisissez ce qui part ; un âge de 90 ans ou plus devient « 90+ », la date n'est donnée qu'au mois près, sauf si vous en décidez autrement, et les mots qui ressemblent à un identifiant vous sont signalés avant l'envoi. Les fichiers ne partent que si vous cochez « Fichiers » (leurs liens de téléchargement durent 90 jours). Un lien s'ouvre sans compte, pour quiconque le détient. Les membres d'un groupe voient la publication et ses commentaires ; « Enregistrer dans les miens » leur en fait leur propre copie.</div>
+        <div class="cell yes"><b>Une courbe de croissance pour la famille (code QR)</b>La carte de croissance (âge, sexe, date de naissance, mesures, votre note — jamais le nom) est chiffrée sur votre ordinateur avant de partir ; la clé n'est que dans le lien du code QR, que le serveur ne voit jamais. Le serveur garde des octets qu'il ne peut pas lire, de 1 heure à 30 jours selon votre choix, compte les ouvertures et les efface à l'échéance ; vous pouvez révoquer le lien en tout temps et exiger un code à 4 chiffres. La page que la famille ouvre est une page statique, hébergée par GitHub, qui ne charge rien d'autre.</div>
+        <div class="cell yes"><b>Une photo prise avec votre iPhone</b>Une photo envoyée du téléphone jumelé vers votre ordinateur est chiffrée sur le téléphone avec une clé que seuls vos deux appareils détiennent ; le serveur la garde au plus 10 minutes, sans pouvoir la lire. Le texte d'une image est lu sur vos appareils.</div>
+        <div class="cell yes"><b>La montre Apple (facultative)</b>Si vous jumelez une Apple Watch, elle affiche un miroir de la note ouverte, nom du patient compris : ce miroir transite par le serveur et en est effacé dès que la montre se tait. L'audio d'une dictée faite à la montre est effacé dès sa transcription (au plus 10 minutes). Ce que la montre garde (statistiques, minuteries) ne contient aucun renseignement de patient.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>Les cartes de cas servent à apprendre</h2>
+      <p>Elles existent pour apprendre : revenir sur vos cas et les partager avec des collègues qui en tireront une leçon. <strong>Dépersonnalisée, une carte n'est pas pour autant anonyme</strong> : un contexte, une date, une présentation rare suffisent parfois à reconnaître un patient. Partagez-les entre collègues, pour apprendre, et entourez-les du même respect de la confidentialité que le dossier dont elles viennent.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Sur votre ordinateur</h2>
+      <p>Dans le stockage de l'extension ou de l'application (qui survit à l'effacement nocturne des données de navigation) : votre session de connexion, vos brouillons de note en cours, une copie locale de votre configuration pour fonctionner hors ligne, une copie de vos cartes de cas et des fichiers que vous avez ouverts (sur l'iPhone, tous les fichiers de vos cartes, pour les consulter sans réseau), une copie dépouillée de chaque note insérée — sans nom, date de naissance, sexe ni âge, 30 au plus par type de visite — qui ne quitte jamais l'ordinateur, et un journal de performance de 500 lignes sans contenu clinique. Se déconnecter vide la copie des cartes de cas de cet ordinateur.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Ce qu'Anota n'enregistre jamais</h2>
+      <div class="grid">
+        <div class="cell no"><b>Les identifiants des patients, lisibles</b>Nom, date de naissance, numéro d'assurance maladie, numéro de dossier, adresse, téléphone, courriel : jamais sur le serveur sous une forme lisible. Le seul code qui en est dérivé est celui qui regroupe vos cartes de cas (voir plus haut), et la seule date de naissance qui y passe est chiffrée dans une courbe remise à la famille.</div>
+        <div class="cell no"><b>L'audio</b>La dictée est transcrite sur votre ordinateur — par le moteur que l'application Mac fait tourner elle-même, ou par la reconnaissance vocale de Chrome sur l'appareil. Sans moteur sur l'appareil, le micro refuse de démarrer plutôt que d'envoyer votre voix ailleurs. Les services de transcription infonuagiques (Google, OpenAI, Amazon au Canada) sont désactivés et ne s'activent jamais d'eux-mêmes ; si vous en activez un, votre audio lui est transmis selon ses conditions.</div>
+        <div class="cell no"><b>Votre navigation</b>Anota ne lit que les pages Omnimed et ne fait rien sur aucun autre site. Elle vérifie si un dossier Omnimed est ouvert dans un onglet ; aucune adresse de page n'est conservée ni transmise.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>Intelligence artificielle : sur l'appareil</h2>
+      <p>Les fonctions d'assistance (dictée vers le gabarit, lecture de la note de triage, suggestions) s'exécutent sur votre ordinateur : le modèle intégré au navigateur lorsqu'il est disponible, un modèle local que l'application Mac démarre elle-même, sinon des règles déterministes. Les services d'IA infonuagiques sont désactivés et ne s'activent jamais pour vous ; activés, ils recevraient le texte dicté ou la note de triage du jour et la description des champs à remplir — sans le nom, la date de naissance ni le numéro d'assurance maladie du patient.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Conservation</h2>
+      <ul>
+        <li><strong>Cartes de cas</strong> : supprimées automatiquement 30 jours après leur création, sauf celles que vous marquez d'une étoile, conservées jusqu'à ce que vous les supprimiez ; une carte supprimée est effacée définitivement après 10 jours, et ses fichiers avec elle (au plus tard le lendemain).</li>
+        <li><strong>Liens de partage</strong> : jusqu'à ce que vous les révoquiez ou que la carte soit supprimée.</li>
+        <li><strong>Publications de groupe</strong> : jusqu'à ce que vous les retiriez, même si la carte d'origine a été supprimée entre-temps ; la copie qu'un collègue a enregistrée lui appartient.</li>
+        <li><strong>Courbes remises aux familles</strong> : jusqu'à l'échéance choisie (30 jours au plus) ou jusqu'à votre révocation.</li>
+        <li><strong>Photos du téléphone</strong> : 10 minutes au plus. <strong>Audio de la montre</strong> : effacé dès sa transcription.</li>
+        <li><strong>Statistiques</strong> : les enregistrements de plus d'environ 13 mois sont regroupés en totaux quotidiens.</li>
+        <li><strong>Événements d'utilisation et d'erreur</strong> : 90 jours.</li>
+        <li><strong>Compte, profil, configuration et licence</strong> : tant que votre compte existe. Sur demande à <span class="pill">aaldeagg@gmail.com</span>, le compte et toutes ses données sont supprimés.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>Accès, partage, sécurité</h2>
+      <ul>
+        <li>Vos données sont isolées par compte (sécurité au niveau des lignes) : un autre médecin utilisant Anota ne peut ni les lire ni les modifier.</li>
+        <li>L'auteur d'Anota, en tant qu'administrateur, voit dans l'application : les invitations, le profil de chaque compte (nom, spécialité, version, type d'appareil, dernière utilisation), les événements d'utilisation et d'erreur, et les licences signées ; il peut suspendre un compte. Il n'y voit ni vos cartes de cas, ni vos statistiques, ni votre configuration. Comme exploitant du serveur, il peut techniquement en consulter le contenu ; il ne le fait que pour répondre à votre demande ou réparer une panne.</li>
+        <li>Fournisseurs : Supabase (base de données, fichiers, connexion et fonctions serveur — région Canada (Central), Montréal) ; GitHub (les installateurs de l'application Mac, dans un dépôt privé remis par un lien personnel, et les pages publiques ouvertes par les familles) ; Google et Apple, seulement si vous vous connectez avec leur compte, et pour la distribution des extensions et de l'application iPhone.</li>
+        <li>Anota ne vend, ne loue ni ne cède aucune donnée à des tiers, et ne les utilise à aucune fin publicitaire.</li>
+        <li>Les données sont chiffrées en transit et au repos. Aucun code n'est chargé à distance : tout le logiciel est contenu dans l'extension ou l'application.</li>
+        <li>En cas d'incident de confidentialité touchant vos données, vous en serez avisé conformément à la Loi 25.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>Vos droits et les changements à cette politique</h2>
+      <p>Vous pouvez demander l'accès à vos données, leur rectification, leur portabilité (l'export complet de votre configuration est aussi disponible dans les réglages) ou leur suppression en écrivant à <span class="pill">aaldeagg@gmail.com</span>. Toute modification de cette politique sera datée ici et signalée dans l'application avant de s'appliquer.</p>
+      <p style="margin-top:12px">Cette version (31 octobre 2026) remplace celle du 11 septembre 2026. Elle décrit les cartes de cas plus précisément — ce qu'elles contiennent, à quoi elles servent et ce que suppose leur partage — et ajoute ce qui est apparu depuis : le profil, la licence signée, les statistiques, le partage en groupe, les courbes remises aux familles, les photos du téléphone et la montre.</p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════ ENGLISH ═══════════════════════════ -->
+  <section lang="en">
+    <div class="plate">
+      <h2>In one sentence</h2>
+      <p><strong>Anota's server never keeps a patient's name, date of birth or health-insurance number in a form it can read.</strong> Anota reads the Omnimed chart you have open, fills your template and writes the note into that same chart. On its server Anota keeps what is about you — your account, your set-up, your statistics — and your case cards: each note you insert is also kept, de-identified, as a card to learn from, which only you can see unless you share it. A few features you start yourself carry patient information through the server, encrypted so that the server cannot read it.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Who is responsible</h2>
+      <p>Anota is developed and operated by its author, a physician practising in Québec. For any question, or to request access, correction or deletion, write to <span class="pill">aaldeagg@gmail.com</span>. That person acts as the person in charge of the protection of personal information under Québec's Law 25.</p>
+    </div>
+
+    <div class="plate">
+      <h2>What Anota stores on its server — and why</h2>
+      <p>Anota uses a server (Supabase, project hosted in region <span class="pill">Canada (Central) — Montréal</span>) so that your set-up and your cards follow you from one device to the next. Stored there, under your account:</p>
+      <div class="grid">
+        <div class="cell yes"><b>Your account</b>Your e-mail address and the date the account was created. You sign in with a one-time code sent by e-mail, or with your Google or Apple account if you choose (Anota then receives your e-mail address and name from it). Accounts are created by invitation.</div>
+        <div class="cell yes"><b>Your profile</b>The name and specialty line you type in, your language, the app version, the kind of device and when you last used Anota — so the author knows who runs which version.</div>
+        <div class="cell yes"><b>Your pilot licence</b>On first use, the licence and confidentiality agreement you sign: your name, profession, e-mail, the date, the language you chose, the signature you draw, a fingerprint of the text you accepted and the app version. It is the record of your agreement and cannot be changed.</div>
+        <div class="cell yes"><b>Your configuration</b>Your note templates, diagnosis cards, lists, usual doses, shortcuts, theme and preferences — everything you change in Settings. Also what Anota learns from your notes and case cards to fit its suggestions to you: words from your lists, card and diagnosis names, short values — with no patient code.</div>
+        <div class="cell yes"><b>Your statistics</b>Counts of patients, visits, diagnoses, prescriptions and procedures, and the time each note and each section took. Nothing that identifies a patient — no name, no number, not even a code standing in for one.</div>
+        <div class="cell yes"><b>Your case cards</b>Each note you insert that has a diagnosis is also kept as a case card: the note's clinical content (history, examination, vital signs, past history, medications and allergies as you wrote them, diagnoses, impressions, plan), the patient's age at the visit, sex and the visit date, plus any files and comments you add. Never the name, date of birth, health-insurance or chart number. To group the cards of the same patient, a one-way code is computed on your computer from the name, date of birth and sex with a secret key that never leaves that computer; the server cannot work back from it to the patient. Free text is kept as you typed it: do not write identifiers in it, or leave them on an image you attach.</div>
+        <div class="cell yes"><b>Usage and error events</b>App version, kind of device, the name of the feature used or of the step that failed (for example a note or a form that did not go into Omnimed), and sanitised error text: anything that looks like note text, a name, a health-insurance number, an e-mail, a telephone number or a long run of digits is removed, and a row is capped at 2 KB. Never a note's contents or the EMR page's contents, never keystrokes. The "Report a problem" button also sends the text you write.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>What travels only when you ask</h2>
+      <div class="grid">
+        <div class="cell yes"><b>Sharing a case card</b>As an image, a text or a PDF you send yourself, by a link for a colleague, or as a post in a group. You choose what goes; an age of 90 or more becomes "90+", the date is given only to the month unless you decide otherwise, and words that look like an identifier are pointed out to you before it is sent. Files go only if you tick "Files" (their download links last 90 days). A link opens without an account, for whoever holds it. Members of a group see the post and its comments; "Save to mine" gives them their own copy.</div>
+        <div class="cell yes"><b>A growth chart for the family (QR code)</b>The growth card (age, sex, date of birth, measurements, your note — never the name) is encrypted on your computer before it leaves; the key is only in the QR code's link, which the server never sees. The server keeps bytes it cannot read, for 1 hour to 30 days as you choose, counts how often it is opened and erases it when it expires; you can revoke the link at any time and require a 4-digit code. The page the family opens is a static page, hosted by GitHub, that loads nothing else.</div>
+        <div class="cell yes"><b>A photo taken with your iPhone</b>A photo sent from your paired phone to your computer is encrypted on the phone with a key only your two devices hold; the server keeps it for at most 10 minutes and cannot read it. The text in an image is read on your devices.</div>
+        <div class="cell yes"><b>The Apple Watch (optional)</b>If you pair an Apple Watch, it shows a mirror of the open note, the patient's name included: that mirror passes through the server and is erased from it as soon as the watch goes quiet. The audio of a dictation made on the watch is erased as soon as it is transcribed (at most 10 minutes). What the watch keeps (statistics, timers) holds no patient information.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>Case cards are for learning</h2>
+      <p>They exist for learning: coming back to your cases and sharing them with colleagues who will learn from them. <strong>De-identified is not anonymous</strong>: a context, a date or a rare presentation can be enough to recognise a patient. Share them among colleagues, to learn, and treat them with the same respect for confidentiality as the chart they came from.</p>
+    </div>
+
+    <div class="plate">
+      <h2>On your computer</h2>
+      <p>In the extension's or the app's storage (which survives the clinic's nightly browsing-data wipe): your sign-in session, your in-progress note drafts, a local copy of your configuration so the app works offline, a copy of your case cards and of the files you have opened (on the iPhone, every file of your cards, so you can see them with no signal), a stripped copy of each inserted note — no name, date of birth, sex or age, at most 30 per kind of visit — that never leaves the computer, and a 500-line performance log with no clinical content. Signing out empties this computer's copy of the case cards.</p>
+    </div>
+
+    <div class="plate">
+      <h2>What Anota never stores</h2>
+      <div class="grid">
+        <div class="cell no"><b>Readable patient identifiers</b>Name, date of birth, health-insurance number, chart number, address, telephone, e-mail: never on the server in a form it can read. The only code derived from them is the one that groups your case cards (above), and the only date of birth that passes through is encrypted inside a growth chart handed to a family.</div>
+        <div class="cell no"><b>Audio</b>Dictation is transcribed on your computer — by the engine the Mac app runs itself, or by Chrome's on-device speech recognition. With no on-device engine, the microphone refuses to start rather than send your voice elsewhere. Cloud transcription services (Google, OpenAI, Amazon in Canada) are off and never switch themselves on; if you turn one on, your audio goes to it under its terms.</div>
+        <div class="cell no"><b>Your browsing</b>Anota reads Omnimed pages only and does nothing on any other site. It checks whether an Omnimed chart is open in a tab; no page address is kept or sent.</div>
+      </div>
+    </div>
+
+    <div class="plate">
+      <h2>Artificial intelligence: on the device</h2>
+      <p>The assistance features (dictation into the template, reading the triage note, suggestions) run on your computer: the browser's built-in model where available, a local model the Mac app starts itself, otherwise deterministic rules. Cloud AI services are off and never switched on for you; if they were, they would receive the dictated text or the day's triage note and a description of the fields to fill — without the patient's name, date of birth or health-insurance number.</p>
+    </div>
+
+    <div class="plate">
+      <h2>Retention</h2>
+      <ul>
+        <li><strong>Case cards</strong>: deleted automatically 30 days after creation, except those you star, which are kept until you delete them; a deleted card is erased permanently after 10 days, and its files with it (by the next day at the latest).</li>
+        <li><strong>Share links</strong>: until you revoke them or the card is deleted.</li>
+        <li><strong>Group posts</strong>: until you withdraw them, even if the original card has been deleted in the meantime; a copy a colleague has saved is theirs.</li>
+        <li><strong>Growth charts handed to families</strong>: until the expiry you chose (30 days at most) or until you revoke them.</li>
+        <li><strong>Photos from the phone</strong>: 10 minutes at most. <strong>Watch audio</strong>: erased as soon as it is transcribed.</li>
+        <li><strong>Statistics</strong>: individual records older than about 13 months are folded into daily totals.</li>
+        <li><strong>Usage and error events</strong>: 90 days.</li>
+        <li><strong>Account, profile, configuration and licence</strong>: for as long as your account exists. On request to <span class="pill">aaldeagg@gmail.com</span>, the account and all its data are deleted.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>Access, sharing, security</h2>
+      <ul>
+        <li>Your data is isolated per account (row-level security): another physician using Anota can neither read nor change it.</li>
+        <li>Anota's author, as administrator, sees in the app: the invitations, each account's profile (name, specialty, version, kind of device, last use), usage and error events, and the signed licences; he can pause an account. He does not see your case cards, your statistics or your configuration there. As the server's operator he is technically able to view its contents; he does so only to answer a request of yours or to repair a fault.</li>
+        <li>Providers: Supabase (database, files, sign-in and server functions — region Canada (Central), Montréal); GitHub (the Mac app's installers, in a private repository reached through a personal link, and the public pages families open); Google and Apple, only if you sign in with their account, and for distributing the extensions and the iPhone app.</li>
+        <li>Anota does not sell, rent or transfer any data to third parties, and uses none of it for advertising.</li>
+        <li>Data is encrypted in transit and at rest. No code is loaded remotely: the whole program is contained in the extension or the app.</li>
+        <li>Should a confidentiality incident affect your data, you will be notified as Law 25 requires.</li>
+      </ul>
+    </div>
+
+    <div class="plate">
+      <h2>Your rights and changes to this policy</h2>
+      <p>You may request access to your data, its correction, its portability (a full export of your configuration is also available in Settings) or its deletion by writing to <span class="pill">aaldeagg@gmail.com</span>. Any change to this policy will be dated here and announced in the app before it applies.</p>
+      <p style="margin-top:12px">This version (October 31, 2026) replaces the one of September 11, 2026. It describes case cards more precisely — what they hold, what they are for and what sharing one involves — and adds what has appeared since: the profile, the signed licence, the statistics, group sharing, growth charts handed to families, photos from the phone and the watch.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <span lang="fr">Anota · Politique de confidentialité · 2026-10-31</span>
+    <span lang="en">Anota · Privacy Policy · 2026-10-31</span>
+  </footer>
+</div>
+<script>
+  (function () {
+    var root = document.documentElement;
+    function setLang(l) {
+      root.setAttribute('data-lang', l); root.setAttribute('lang', l);
+      var b = document.querySelectorAll('[data-set-lang]');
+      for (var i = 0; i < b.length; i++) b[i].setAttribute('aria-pressed', b[i].getAttribute('data-set-lang') === l ? 'true' : 'false');
+      try { localStorage.setItem('anota-privacy-lang', l); } catch (_) {}
+    }
+    var pick = null;
+    try { pick = localStorage.getItem('anota-privacy-lang'); } catch (_) {}
+    if (!pick) pick = /^en/i.test(navigator.language || '') ? 'en' : 'fr';
+    setLang(pick);
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('[data-set-lang]');
+      if (t) setLang(t.getAttribute('data-set-lang'));
+    });
+  })();
+</script>
+</body>
+</html>
